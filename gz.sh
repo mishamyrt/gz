@@ -1,4 +1,8 @@
 #!/bin/bash
+if [ "$#" -ne 1 ]; then
+    echo "You shoud pass file name to gz"
+    exit
+fi
 temp=$(mktemp -d)
 original_size=$(wc -c < $1 | xargs) 
 yellow='\033[0;33m'
