@@ -1,0 +1,1 @@
+# GZip file size checker
