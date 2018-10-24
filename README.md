@@ -2,7 +2,7 @@
 Tiny script with which you can find out the file size after gzip compression.
 
 <p align="center">
-<img src="./terminal@2x.png" width="646" height="auto">
+<img src="./terminal@2x.png" width="538" height="auto">
 </p>
 
 ## Usage
