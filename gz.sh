@@ -1,12 +1,11 @@
 #!/bin/bash
 if [ "$#" -ne 1 ]; then
-    echo "You shoud pass file name to gz"
+    echo "You shoud pass single file path"
     exit
 fi
 temp=$(mktemp -d)
 original_size=$(wc -c < $1 | xargs) 
 yellow='\033[0;33m'
-green='\033[0;32m'
 nc='\033[0m'
 zip $temp/zip $1 > /dev/null
 gzipped_size=$(wc -c < $temp/zip.zip | xargs)
