@@ -7,8 +7,7 @@ temp=$(mktemp -d)
 original_size=$(wc -c < $1 | xargs) 
 yellow='\033[0;33m'
 nc='\033[0m'
-zip $temp/zip $1 > /dev/null
-gzipped_size=$(wc -c < $temp/zip.zip | xargs)
+gzipped_size=$(gzip -c $1 | wc -c | xargs)
 rm -r "${temp}"
 diff=$(printf "%.1f\n" $(echo "scale=4;(${gzipped_size} / ${original_size}) * 100" | bc -l))
 echo -e "Original size: ${yellow}${original_size} bytes${nc}"
