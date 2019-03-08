@@ -14,7 +14,7 @@ case "$(uname -s)" in
         ;;
 esac
 if [ ! -f $filePath ]; then
-    sudo curl $gzUrl > ${filePath}
+    sudo curl -s $gzUrl > ${filePath}
     sudo chmod +x ${filePath}
 else
     echo 'GZ is already installed'

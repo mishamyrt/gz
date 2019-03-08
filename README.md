@@ -10,7 +10,7 @@ Tiny script with which you can find out the file size after gzip compression.
 Installation performed by a single command.
 
 ```sh
-curl https://raw.githubusercontent.com/mishamyrt/gz/master/install.sh | bash
+curl -s https://raw.githubusercontent.com/mishamyrt/gz/master/install.sh | bash
 ```
 
 ## Usage
